@@ -1,4 +1,5 @@
 c = float(input("Enter the circumference ="))
-r = c/(2*3.14)
-a = 3.14*r*r
+pi = 22/7
+r = c/(2*pi)
+a = pi*r*r
 print("Area of circle is", a)
