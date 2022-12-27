@@ -1,21 +1,24 @@
 import pgzrun
-
-WIDTH = 1000
-HEIGHT = 600
-
+WIDTH = 1440
+HEIGHT = 900
 scr = 0
-def gamescr(bgcolor, title, info):
+
+def gamescr(title, bgcolor='gray', info="Play the game"):
     screen.fill(bgcolor)
-    screen.draw.text(title, center = (WIDTH/2, HEIGHT/2), fontsize = 100, color = 'white', align = 'center')
-    screen.draw.text(info, center = (WIDTH/2, HEIGHT/2+100), fontsize = 50, color = 'white', align = 'center')
+    screen.draw.text(title, 
+        center= (WIDTH/2, HEIGHT/2), 
+        fontsize=100, color='white', align='center')
+    screen.draw.text(info, 
+        center=(WIDTH/2, HEIGHT/2+100),
+        fontsize=50, color='white', align='center')
 
 def draw():
-    if scr == 0:
-        gamescr('black', 'Amazing Game', 'Press space to start')
+    if scr==0:
+        gamescr('Amazing game', 'black','Press space to start')
     elif scr == 1:
-        gamescr('green', 'Game is running', 'Press esc to end')
+        gamescr(bgcolor='green', title='Game is Running')
     elif scr == 2:
-        gamescr('red', 'Game Over', 'Press enter to restart')
+        gamescr('Game Over', info='go home')
 
 def update():
     global scr
@@ -26,5 +29,6 @@ def update():
     if keyboard.RETURN and scr == 2:
         scr = 0
     print(scr)
+
 
 pgzrun.go()

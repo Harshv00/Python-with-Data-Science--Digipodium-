@@ -1,7 +1,7 @@
-p = float(input("Enter principal = "))
-r = float(input("Enter rate = "))
-t = float(input("Enter time = "))
-si = (p*r*t)/100
-print("The interest is =",si)
-amount = si + p
-print("The total amount is = ",amount)
+p=float(input("enter the principle amount:"))
+r=float(input("enter the rate of interest:"))
+t=float(input("enter the time:"))
+si=p*r*t/100
+print("simple interest is:",si)
+amount=si+p
+print("amount is:",amount)

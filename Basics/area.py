@@ -1,5 +1,5 @@
-c = float(input("Enter the circumference ="))
-pi = 22/7
-r = c/(2*pi)
-a = pi*r*r
-print("Area of circle is", a)
+circumference=float(input("enter the circumference:"))
+r=circumference/(2*3.14)
+print(r)
+area=3.14*r*r
+print("area is:",area)

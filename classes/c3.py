@@ -1,16 +1,15 @@
 import random
-
+# class subclass(super_class)
 class MyList(list): # inherits from list
     
     def shuffle(self):
         random.shuffle(self)
-
+    
     def get_random(self):
         return random.choice(self)
-    
-#object
 
-a = MyList([12, 121, 3, 12, 3, 54, 21, 22, 66])
+
+a = MyList([12, 121, 3,1,2,4,5,1,2,5])
 a.sort()
 print(a)
 a.shuffle()
